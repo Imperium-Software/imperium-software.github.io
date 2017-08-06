@@ -15,5 +15,10 @@ img.center {
 }
 
 #sat-logo {
-    width: 100px;
+    width: 300px;
+}
+
+footer {
+    text-align: center;
+    color : #333;
 }
