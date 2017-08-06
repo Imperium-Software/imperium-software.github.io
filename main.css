@@ -1,0 +1,15 @@
+h1 {
+    
+    font-size: 80px;
+    margin-bottom: 0px;
+}
+
+h1, h2, h3, img {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
