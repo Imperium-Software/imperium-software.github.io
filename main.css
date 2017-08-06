@@ -13,3 +13,7 @@ img.center {
     display: block;
     margin: 0 auto;
 }
+
+#sat-logo {
+    width: 100px;
+}
