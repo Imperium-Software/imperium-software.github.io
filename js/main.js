@@ -1,6 +1,18 @@
+var socket;
 function solve(cnf) {
-
+    socket = io('localhost:55556');
+    console.log('test');
+    socket.on('connect', function(){
+        console.log('hi sent');
+        socket.send('hi');
+    });
+    socket.send('hi');
+    console.log('test2');
 }
+
+socket.on('connect', () => {
+    socket.send('hi');
+});
 
 function solve1() {
     var answer = solve("p cnf 4 2\n4 1 -3 0\n4 2 -3 0");
