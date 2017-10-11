@@ -1,21 +1,21 @@
-var socket;
 function solve(cnf) {
-    socket = io('localhost:55556');
-    console.log('test');
-    socket.on('connect', function(){
-        console.log('hi sent');
-        socket.send('hi');
+    var cnf_data = {
+        'cnf': cnf
+    };
+
+    $.ajax({
+        type        : 'POST',
+        url         : 'http://localhost:3000',
+        data        : cnf_data,
+        dataType    : 'json',
+        encode      : true
+    }).done(function(data) {
+        console.log(data);
     });
-    socket.send('hi');
-    console.log('test2');
 }
 
-socket.on('connect', () => {
-    socket.send('hi');
-});
-
 function solve1() {
-    var answer = solve("p cnf 4 2\n4 1 -3 0\n4 2 -3 0");
+    var answer = solve({"raw_input":['p cnf 4 2', '4 1 -3 0', '4 2 -3 0']});
 }
 
 function solve2() {
